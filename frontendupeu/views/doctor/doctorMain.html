@@ -1,0 +1,33 @@
+<div class="container">
+    <h3>{{headingTitlex}}</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Colegiatura</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>DNI</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nuevoProducto">
+                <span class="glyphicon glyphicon-plus"></span> Nuevo </button>
+            <tr ng-repeat="doctor in doctors">
+                <td>{{doctor.numeroColegio}}</td>
+                <td>{{doctor.idPersona.nombres}}</td>
+                <td>{{doctor.idPersona.apellPaterno}} {{doctor.idPersona.apellMater}}</td>
+                <td>{{doctor.idPersona.dni}}</td>
+                <td>
+                <td>
+                    <a href="eliminarDoctor?id=${dato.idDoctor}">Eliminar</a>&emsp14;
+                    <a href="eliminarDoctor?id=${dato.idDoctor}">Editar</a>&emsp14;
+                </td>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
